@@ -1,0 +1,42 @@
+class Dogs {
+
+  private String name;
+  private String breed;
+
+  public Dogs() {
+    // No initialization parameters
+  }
+
+  public Dogs(String breed) {
+    this.breed = breed;
+  }
+
+  public Dogs(String name, String breed) {
+    this.name = name;
+    this.breed = breed;
+  }
+
+  void isRunning(int runStatus) {
+    if (runStatus == 1) {
+      System.out.println("Dog is running");
+    } else {
+      System.out.println("Dog is not running");
+    }
+  }
+
+
+}
+
+public class Main {
+
+  public static void main(String[] args) {
+    Dogs dog1 = new Dogs();
+    Dogs dog2 = new Dogs("Bulldog");
+
+    dog1.isRunning(0);
+    dog2.tailWagging("Woof");
+    
+    // A dog with both name and breed initialized at the time of object creation.
+    Dogs dog3 = new Dogs("Snoopy", "German Shepherd");
+  }
+}
